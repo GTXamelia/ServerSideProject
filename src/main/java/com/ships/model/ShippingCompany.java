@@ -32,8 +32,8 @@ public class ShippingCompany {
 	
 	@NotNull
 	private BigDecimal balance;
-	@OneToMany(mappedBy="shippingCompany")
 	
+	@OneToMany(mappedBy="shippingCompany")
 	private List<Ship> ships = new ArrayList<Ship>();
 	
 	@OneToMany(mappedBy="shippingCompany")
