@@ -30,13 +30,13 @@ public class OrderController {
 		return "showOrders";
 	}
 		
-	@RequestMapping(value = "/addOrder", method = RequestMethod.GET)
+	@RequestMapping(value = "/createOrder", method = RequestMethod.GET)
 	public String getShip(@ModelAttribute("orderAdd") OrderInfo c, HttpServletRequest h) {
-		return "addOrder";
+		return "createOrder";
 	}
 	
-	@RequestMapping(value = "/addOrder", method = RequestMethod.POST)
-	public String addShip(@Valid @ModelAttribute("OrderAdd") OrderInfo c, BindingResult result, HttpServletRequest h, Model m) {
+	@RequestMapping(value = "/createOrder", method = RequestMethod.POST)
+	public String addShip(@Valid @ModelAttribute("orderAdd") OrderInfo c, BindingResult result, HttpServletRequest h, Model m) {
 		
 		if (result.hasErrors()) {
 			return "addOrder";
@@ -47,7 +47,7 @@ public class OrderController {
 	
 			m.addAttribute("orders", orders);
 	
-			return "showOrders";
+			return "createOrder";
 		}
 	}
 }

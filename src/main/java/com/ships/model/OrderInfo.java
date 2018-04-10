@@ -52,7 +52,6 @@ public class OrderInfo {
 	}
 	@Override
 	public String toString() {
-		return "OrderInfo [oid=" + oid + ", shippingCompany=" + shippingCompany + ", ship=" + ship + ", date=" + date
-				+ "]";
+		return "OrderInfo [oid=" + oid + ", shippingCompany=" + shippingCompany + ", ship=" + ship + ", date=" + date + "]";
 	}
 }

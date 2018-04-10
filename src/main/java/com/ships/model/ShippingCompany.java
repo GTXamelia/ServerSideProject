@@ -21,7 +21,7 @@ public class ShippingCompany {
 	
 	@Id
 	@GeneratedValue
-	private int scid;
+	private Long scid;
 	
 	@NotNull
     @Size(min=1,max=250)
@@ -42,10 +42,10 @@ public class ShippingCompany {
 	private List<OrderInfo> orders = new ArrayList<OrderInfo>();
 
 	
-	public int getScid() {
+	public Long getScid() {
 		return scid;
 	}
-	public void setScid(int scid) {
+	public void setScid(Long scid) {
 		this.scid = scid;
 	}
 	public String getName() {

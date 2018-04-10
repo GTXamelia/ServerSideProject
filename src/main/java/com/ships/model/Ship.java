@@ -16,7 +16,7 @@ public class Ship {
 	
 	@Id
 	@GeneratedValue
-	private int sid;
+	private Long sid;
 	
 	@NotNull
     @Size(min = 1,max = 250)
@@ -37,10 +37,10 @@ public class Ship {
 	@JoinColumn(name = "scid")
 	private ShippingCompany shippingCompany;
 		
-	public int getSid() {
+	public Long getSid() {
 		return sid;
 	}
-	public void setSid(int sid) {
+	public void setSid(Long sid) {
 		this.sid = sid;
 	}
 	public String getName() {
