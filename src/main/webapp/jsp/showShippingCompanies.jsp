@@ -25,10 +25,14 @@ table, th, td {
 			</tr>
 			<c:forEach items="${comp}" var="comp">
 				<tr>
-					<td>${comp.name}<tv>
-					<td>${comp.homePort}<tv>
-					<td>${comp.balance}<tv>
-					<td>${comp.ships}<tv>
+					<td>${comp.name}<td>
+					<td>${comp.homePort}<td>
+					<td>${comp.balance}<td>
+					<td>
+						<c:forEach items="${comp.ships}" var="comp">
+							<td>${ships.name}<td>
+						</c:forEach>
+					<td>
 				</tr>
 			</c:forEach>
 		</table>
