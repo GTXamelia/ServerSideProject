@@ -70,8 +70,7 @@ public class ShippingCompany {
 	}
 	@Override
 	public String toString() {
-		return "ShippingCompany [scid=" + scid + ", name=" + name + ", homePort=" + homePort + ", balance=" + balance
-				+  "]";
+		return "scid=" + scid + ", name=" + name + ", homePort=" + homePort + ", balance=" + balance;
 	}
 
 }
