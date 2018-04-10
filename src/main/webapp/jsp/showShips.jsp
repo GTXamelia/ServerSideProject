@@ -30,7 +30,7 @@ table, th, td {
 					<td>${ships.passengers}<tv>
 					<td>${ships.cost}<tv>
 					<td>${ships.metres}<tv>
-					<td>${ships.shippingCompany}<tv>
+					<td>${ships.shippingCompany.name}<tv>
 					
 				</tr>
 			</c:forEach>
