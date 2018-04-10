@@ -22,11 +22,16 @@ table, th, td {
 				<th>Passangers</th>
 				<th>Cost</th>
 				<th>Length(Metres)</th>
-				<th>Length(Shipping)</th>
+				<th>Shipping Company</th>
 			</tr>
 			<c:forEach items="${ships}" var="ships">
 				<tr>
 					<td>${ships.name}<tv>
+					<td>${ships.passengers}<tv>
+					<td>${ships.cost}<tv>
+					<td>${ships.metres}<tv>
+					<td>${ships.shippingCompany}<tv>
+					
 				</tr>
 			</c:forEach>
 		</table>
