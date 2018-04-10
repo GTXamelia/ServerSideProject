@@ -9,10 +9,10 @@ table, th, td {
 }
 </style>
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-	<title>SS RAD Final Project (ships)</title>
+	<title>SS RAD Final Project (Orders)</title>
 </head>
 <body>
-	<h1>Ship</h1>
+	<h1>Orders</h1>
 	
 	<h1></h1>
 		<table>
@@ -25,9 +25,9 @@ table, th, td {
 			<c:forEach items="${orders}" var="orders">
 				<tr>
 					<td>${orders.oid}<tv>
-					<td>${ships.oid}<tv>
-					<td>${ships.oid}<tv>
-					<td>${ships.oid}<tv>
+					<td>${orders.shippingCompany.name}<tv>
+					<td>${orders.ship.name}<tv>
+					<td>${orders.date}<tv>
 				</tr>
 			</c:forEach>
 		</table>
