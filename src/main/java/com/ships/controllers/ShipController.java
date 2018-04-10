@@ -31,12 +31,12 @@ public class ShipController {
 	}
 		
 	@RequestMapping(value = "/addShip", method = RequestMethod.GET)
-	public String getProduct(@ModelAttribute("shipAdd") Ship c, HttpServletRequest h) {
+	public String getShip(@ModelAttribute("shipAdd") Ship c, HttpServletRequest h) {
 		return "addShip";
 	}
 	
 	@RequestMapping(value = "/addShip", method = RequestMethod.POST)
-	public String postProduct(@Valid @ModelAttribute("shipAdd") Ship c, BindingResult result, HttpServletRequest h, Model m) {
+	public String addShip(@Valid @ModelAttribute("shipAdd") Ship c, BindingResult result, HttpServletRequest h, Model m) {
 		
 		if (result.hasErrors()) {
 			return "addShip";
