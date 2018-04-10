@@ -9,7 +9,7 @@ table, th, td {
 }
 </style>
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-	<title>SS RAD Final Project (ships)</title>
+	<title>SS RAD Final Project (Ships)</title>
 </head>
 <body>
 	<h1>Ship</h1>
