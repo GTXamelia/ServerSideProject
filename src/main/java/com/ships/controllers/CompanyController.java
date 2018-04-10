@@ -47,7 +47,7 @@ public class CompanyController {
 	
 			m.addAttribute("companies", companies);
 	
-			return "addShippingCompany";
+			return "showShippingCompanies";
 		}
 	}
 }
