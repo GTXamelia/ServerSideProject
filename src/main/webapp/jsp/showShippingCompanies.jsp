@@ -13,26 +13,21 @@ table, th, td {
 	<title>SS RAD Final Project (Company)</title>
 </head>
 <body>
-	<h1>Ship</h1>
+	<h1>Company</h1>
 	
 	<h1></h1>
 		<table>
 			<tr>
 				<th>Name</th>
-				<th>Home Port</th>
-				<th>Balance</th>
-				<th>Ship</th>
+				<th>Home Post</th>
+				<th>Cost</th>
 			</tr>
-			<c:forEach items="${comp}" var="comp">
+			<c:forEach items="${companies}" var="companies">
 				<tr>
-					<td>${comp.name}<td>
-					<td>${comp.homePort}<td>
-					<td>${comp.balance}<td>
-					<td>
-						<c:forEach items="${comp.ships}" var="comp">
-							<td>${ships.name}<td>
-						</c:forEach>
-					<td>
+					<td>${companies.name}<tv>
+					<td>${companies.homePort}<tv>
+					<td>${companies.balance}<tv>
+					<td>${companies.ships}<tv>
 				</tr>
 			</c:forEach>
 		</table>

@@ -21,21 +21,23 @@ public class ShippingCompany {
 	@Id
 	@GeneratedValue
 	private int scid;
+	
 	@NotNull
     @Size(min=1,max=250)
 	private String name;
+	
 	@NotNull
     @Size(min=1,max=250)
 	private String homePort;
+	
 	@NotNull
 	private BigDecimal balance;
 	@OneToMany(mappedBy="shippingCompany")
-	private List<Ship>  
-	ships = new ArrayList<Ship>();
+	
+	private List<Ship> ships = new ArrayList<Ship>();
 	
 	@OneToMany(mappedBy="shippingCompany")
-	private List<OrderInfo>
-	orders = new ArrayList<OrderInfo>();
+	private List<OrderInfo> orders = new ArrayList<OrderInfo>();
 
 	
 	public int getScid() {

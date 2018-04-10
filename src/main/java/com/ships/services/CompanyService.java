@@ -11,14 +11,14 @@ import com.ships.repositories.CompanyInterface;
 public class CompanyService {
 
 	@Autowired
-	private CompanyInterface shipInt;
+	private CompanyInterface companyInt;
 
 	public ArrayList<ShippingCompany> getAll() {
-		return (ArrayList<ShippingCompany>) shipInt.findAll();
+		return (ArrayList<ShippingCompany>) companyInt.findAll();
 	}
 
-	public ShippingCompany save(ShippingCompany comp) {
-		return shipInt.save(comp);
+	public ShippingCompany save(ShippingCompany company) {
+		return companyInt.save(company);
 	}
 
 	

@@ -24,8 +24,8 @@ public class CompanyController {
 	@RequestMapping(value = "/showShippingCompanies", method = RequestMethod.GET)
 	public String getCompanies(Model m) {
 
-		ArrayList<ShippingCompany> comp = compOb.getAll();
-		m.addAttribute("comp", comp);
+		ArrayList<ShippingCompany> companies = compOb.getAll();
+		m.addAttribute("companies", companies);
 
 		return "showShippingCompanies";
 	}
@@ -43,9 +43,9 @@ public class CompanyController {
 		} else {
 			compOb.save(c);
 			
-			ArrayList<ShippingCompany> comp = compOb.getAll();
+			ArrayList<ShippingCompany> companies = compOb.getAll();
 	
-			m.addAttribute("comp", comp);
+			m.addAttribute("companies", companies);
 	
 			return "addShippingCompany";
 		}

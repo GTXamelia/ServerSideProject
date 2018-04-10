@@ -13,15 +13,21 @@ import javax.validation.constraints.Size;
 
 @Entity
 public class Ship {
+	
 	@Id
 	@GeneratedValue
 	private int sid;
+	
 	@NotNull
     @Size(min=1,max=250)
 	private String name;
+	
+	@Min(value = 1)
 	private int passengers;
+	
 	@NotNull
 	private BigDecimal cost;
+	
 	@Min(value = 1)
 	private double metres;
 	
@@ -67,7 +73,7 @@ public class Ship {
 	}
 	@Override
 	public String toString() {
-		return name + ", " + metres + "Mtrs, " +  cost;
+		return name + ", " + metres + "Mtrs, " +  cost + "\n";
 	}	
 	
 }
