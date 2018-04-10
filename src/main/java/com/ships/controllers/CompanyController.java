@@ -19,31 +19,31 @@ import com.ships.services.CompanyService;
 public class CompanyController {
 	
 	@Autowired
-	private CompanyService compOb;
+	private CompanyService companyOb;
 	
 	@RequestMapping(value = "/showShippingCompanies", method = RequestMethod.GET)
 	public String getCompanies(Model m) {
 
-		ArrayList<ShippingCompany> companies = compOb.getAll();
+		ArrayList<ShippingCompany> companies = companyOb.getAll();
 		m.addAttribute("companies", companies);
 
 		return "showShippingCompanies";
 	}
 		
 	@RequestMapping(value = "/addShippingCompany", method = RequestMethod.GET)
-	public String getCompany(@ModelAttribute("compAdd") ShippingCompany c, HttpServletRequest h) {
+	public String getCompany(@ModelAttribute("companyAdd") ShippingCompany c, HttpServletRequest h) {
 		return "addShippingCompany";
 	}
 	
 	@RequestMapping(value = "/addShippingCompany", method = RequestMethod.POST)
-	public String addCompany(@Valid @ModelAttribute("compAdd") ShippingCompany c, BindingResult result, HttpServletRequest h, Model m) {
+	public String addCompany(@Valid @ModelAttribute("companyAdd") ShippingCompany c, BindingResult result, HttpServletRequest h, Model m) {
 		
 		if (result.hasErrors()) {
 			return "addShippingCompany";
 		} else {
-			compOb.save(c);
+			companyOb.save(c);
 			
-			ArrayList<ShippingCompany> companies = compOb.getAll();
+			ArrayList<ShippingCompany> companies = companyOb.getAll();
 	
 			m.addAttribute("companies", companies);
 	
