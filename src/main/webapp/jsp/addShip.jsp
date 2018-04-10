@@ -6,21 +6,25 @@
 <title>SS RAD Final Project(Add Ship)</title>
 </head>
 <body>
-	<form:form modelAttribute="Ship">
+	<form:form modelAttribute="shipAdd">
 		<h1>Add Ship</h1>
 		<table>
 			<tr>
 				<td>Ship Name:</td>
 				<td><form:input path="name"></form:input></td>
+			</tr>
 				<td>Passangers:</td>
 				<td><form:input path="passengers"></form:input></td>
+			<tr>
 				<td>Cost:</td>
 				<td><form:input path="cost"></form:input></td>
+			</tr>
+			<tr>
 				<td>Metres:</td>
 				<td><form:input path="metres"></form:input></td>
 			</tr>
 			<tr>
-				<td colspan="2"><input type="submit" value="Add" /></td>
+				<td><input type="submit" value="Add" /></td>
 			</tr>
 		</table>
 		<a href="/">Home</a>

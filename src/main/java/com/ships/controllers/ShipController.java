@@ -31,4 +31,9 @@ public class ShipController {
 		return "showShips";
 	}
 	
+		
+	@RequestMapping(value = "/addShip", method = RequestMethod.GET)
+	public String getProduct(@ModelAttribute("shipAdd") Ship c, HttpServletRequest h) {
+		return "addShip";
+	}
 }

@@ -14,7 +14,6 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 @Entity
-@Table(name="SHIPS")
 public class Ship {
 	@Id
 	@GeneratedValue
