@@ -2,7 +2,6 @@ package com.ships.controllers;
 
 
 import java.util.ArrayList;
-
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,10 +29,25 @@ public class ShipController {
 
 		return "showShips";
 	}
-	
 		
 	@RequestMapping(value = "/addShip", method = RequestMethod.GET)
 	public String getProduct(@ModelAttribute("shipAdd") Ship c, HttpServletRequest h) {
 		return "addShip";
+	}
+	
+	@RequestMapping(value = "/addShip", method = RequestMethod.POST)
+	public String postProduct(@Valid @ModelAttribute("shipAdd") Ship c, BindingResult result, HttpServletRequest h, Model m) {
+		
+		if (result.hasErrors()) {
+			return "addShip";
+		} else {
+			shipOb.save(c);
+			
+			ArrayList<Ship> ships = shipOb.getAll();
+	
+			m.addAttribute("ships", ships);
+	
+			return "showShips";
+		}
 	}
 }

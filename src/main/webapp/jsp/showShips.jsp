@@ -35,6 +35,11 @@ table, th, td {
 				</tr>
 			</c:forEach>
 		</table>
+		
+		<c:forEach items="${err}" var="err">
+			<p>${err.error}</p>
+		</c:forEach>
+		
 	<a href="/">Home</a>
 </body>
 </html>
