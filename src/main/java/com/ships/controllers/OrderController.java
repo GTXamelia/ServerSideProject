@@ -39,7 +39,7 @@ public class OrderController {
 	public String addShip(@Valid @ModelAttribute("OrderAdd") OrderInfo c, BindingResult result, HttpServletRequest h, Model m) {
 		
 		if (result.hasErrors()) {
-			return "addShip";
+			return "addOrder";
 		} else {
 			orderOb.save(c);
 			
