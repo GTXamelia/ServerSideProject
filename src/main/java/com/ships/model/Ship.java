@@ -19,20 +19,22 @@ public class Ship {
 	private int sid;
 	
 	@NotNull
-    @Size(min=1,max=250)
+    @Size(min = 1,max = 250)
 	private String name;
 	
+	@NotNull
 	@Min(value = 1)
 	private int passengers;
 	
 	@NotNull
 	private BigDecimal cost;
 	
+	@NotNull
 	@Min(value = 1)
 	private double metres;
 	
 	@ManyToOne
-	@JoinColumn(name="scid")
+	@JoinColumn(name = "scid")
 	private ShippingCompany shippingCompany;
 		
 	public int getSid() {
