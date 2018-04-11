@@ -25,7 +25,7 @@
 			<tr>
 			<td>Shipping Company:</td>
 				<td>
-					<select name="prodSKUs">
+					<select name="companies">
 						<c:forEach items="${companies}" var="companies">
 							<option value="${companies}">${companies}</option>
 						</c:forEach>

@@ -63,7 +63,7 @@ public class OrderController {
 		} else {
 			orderOb.save(c);
 	
-			return "createOrder";
+			return "showOrders";
 		}
 	}
 }
