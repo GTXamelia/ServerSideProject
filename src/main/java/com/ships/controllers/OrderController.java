@@ -55,12 +55,13 @@ public class OrderController {
 	@RequestMapping(value = "/createOrder", method = RequestMethod.POST)
 	public String addShip(@Valid @ModelAttribute("orderAdd") OrderInfo c, BindingResult result, HttpServletRequest h, Model m) {
 		
-		ArrayList<OrderInfo> orders = orderOb.getAll();
-		m.addAttribute("orders", orders);
-		
 		if (result.hasErrors()) {
 			return "addOrder";
 		} else {
+			
+			ArrayList<OrderInfo> orders = orderOb.getAll();
+			m.addAttribute("orders", orders);
+			
 			orderOb.save(c);
 	
 			return "showOrders";

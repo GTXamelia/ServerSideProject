@@ -38,9 +38,10 @@ public class OrderService {
 
 	public OrderInfo save(OrderInfo order) {
 		
-		//ship = shipInt.findOne(order.getShip().getSid());
+		ship = shipInt.findOne(order.getShip().getSid());
 		//ShippingCompany = companyInt.findOne(order.getShippingCompany().getScid());
 		
+		order.setShip(ship);
 		order.setDate(dateFormat.format(date));
 		
 		return orderInt.save(order);

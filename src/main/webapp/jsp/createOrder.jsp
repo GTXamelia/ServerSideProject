@@ -15,11 +15,8 @@
 			<tr>
 				<td>Ship Name:</td>
 				<td>
-					<select name="prodSKUs">
-						<c:forEach items="${ships}" var="ships">
-							<option value="${ships}">${ships}</option>
-						</c:forEach>
-					</select>
+				<form:select path="ship" items="${ships}">
+				</form:select>
 				</td>
 			</tr>
 			<tr>
