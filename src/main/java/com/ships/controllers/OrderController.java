@@ -31,7 +31,11 @@ public class OrderController {
 	}
 		
 	@RequestMapping(value = "/createOrder", method = RequestMethod.GET)
-	public String getShip(@ModelAttribute("orderAdd") OrderInfo c, HttpServletRequest h) {
+	public String getShip(@ModelAttribute("orderAdd") OrderInfo c, HttpServletRequest h, Model m) {
+		
+		ArrayList<OrderInfo> orders = orderOb.getAll();
+		m.addAttribute("orders", orders);
+		
 		return "createOrder";
 	}
 	
