@@ -16,8 +16,18 @@
 				<td>Ship Name:</td>
 				<td>
 					<select name="prodSKUs">
-						<c:forEach items="${orders}" var="orders">
-							<option value="${orders}">${orders}</option>
+						<c:forEach items="${ships}" var="ships">
+							<option value="${ships}">${ships}</option>
+						</c:forEach>
+					</select>
+				</td>
+			</tr>
+			<tr>
+			<td>Shipping Company:</td>
+				<td>
+					<select name="prodSKUs">
+						<c:forEach items="${companies}" var="companies">
+							<option value="${companies}">${companies}</option>
 						</c:forEach>
 					</select>
 				</td>
