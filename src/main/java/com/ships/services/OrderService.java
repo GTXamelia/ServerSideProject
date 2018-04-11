@@ -27,7 +27,6 @@ public class OrderService {
 	private CompanyInterface companyInt;
 	
 	private Ship ship;
-	
 	private ShippingCompany ShippingCompany;
 	
 	private DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
@@ -39,8 +38,10 @@ public class OrderService {
 
 	public OrderInfo save(OrderInfo order) {
 		
+		//ship = shipInt.findOne(order.getShip().getSid());
+		//ShippingCompany = companyInt.findOne(order.getShippingCompany().getScid());
 		
-		
+		order.setDate(dateFormat.format(date));
 		
 		return orderInt.save(order);
 	}
