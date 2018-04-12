@@ -52,7 +52,7 @@ public class OrderController {
 		
 		for (Ship s : ships) {	
 			if (s.getShippingCompany() == null){
-				shipList.put(s.getSid(), s.getName());
+				shipList.put(s.getSid(), s.getName() + ", Cost = " + s.getCost());
 			}
 		}
 		
@@ -64,7 +64,7 @@ public class OrderController {
 		Map<Long,String> companyList = new HashMap<Long,String>();
 		
 		for (ShippingCompany sc : companies) {	
-			companyList.put(sc.getScid(), sc.getName());
+			companyList.put(sc.getScid(), sc.getName() + ", Balance = " + sc.getBalance());
 		}
 		
 		m.addAttribute("companyList", companyList);
