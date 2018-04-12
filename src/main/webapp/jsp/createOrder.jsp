@@ -21,7 +21,7 @@
 			<tr>
 			<td>Shipping Company:</td>
 				<td>
-					<form:select path="ship" items="${companies}"/>
+					<form:select path="ShippingCompany" items="${companyList}"/>
 				</td>
 			</tr>
 			<tr>
