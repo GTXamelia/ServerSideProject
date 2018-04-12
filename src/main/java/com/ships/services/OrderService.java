@@ -43,8 +43,6 @@ public class OrderService {
 		
 		if (shipInt.findOne(order.getShip().getSid()) != null) {
 			ship = shipInt.findOne(order.getShip().getSid());
-		}else{
-			
 		}
 		
 		ShippingCompany = companyInt.findOne(order.getShippingCompany().getScid());
