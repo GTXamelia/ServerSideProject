@@ -80,7 +80,7 @@ public class OrderController {
 		
 		if (result.hasErrors()) {
 			return "addOrder";
-		}else if(c.getShip() == null){
+		}else if(c.getShip() == null || c.getShippingCompany() == null){
 			return "errorAddOrder";
 		}else {
 			
