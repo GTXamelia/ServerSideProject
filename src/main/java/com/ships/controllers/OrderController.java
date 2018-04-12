@@ -43,7 +43,7 @@ public class OrderController {
 		return "showOrders";
 	}
 		
-	@RequestMapping(value = "/createOrder", method = RequestMethod.GET)
+	@RequestMapping(value = "/addOrder", method = RequestMethod.GET)
 	public String getShip(@ModelAttribute("orderAdd") OrderInfo c, HttpServletRequest h, Model m) {
 		
 		ArrayList<Ship> ships = shipOb.getAll();
@@ -69,10 +69,10 @@ public class OrderController {
 		
 		m.addAttribute("companyList", companyList);
 		
-		return "createOrder";
+		return "addOrder";
 	}
 	
-	@RequestMapping(value = "/createOrder", method = RequestMethod.POST)
+	@RequestMapping(value = "/addOrder", method = RequestMethod.POST)
 	public String addShip(@Valid @ModelAttribute("orderAdd") OrderInfo c, BindingResult result, HttpServletRequest h, Model m) {
 		
 		if (result.hasErrors()) {
