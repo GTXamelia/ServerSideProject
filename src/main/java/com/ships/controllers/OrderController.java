@@ -83,8 +83,11 @@ public class OrderController {
 			return "errorAddOrderMoney";
 		}else {
 			
+			c.getShippingCompany().setBalance(c.getShippingCompany().getBalance().subtract(c.getShip().getCost()));
+			
 			orderOb.save(c);
 			shipOb.save(c.getShip());
+			companyOb.save(c.getShippingCompany());
 			
 			
 			ArrayList<OrderInfo> orders = orderOb.getAll();
