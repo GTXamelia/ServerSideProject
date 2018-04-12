@@ -2,6 +2,9 @@ package com.ships.controllers;
 
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -44,10 +47,27 @@ public class OrderController {
 	public String getShip(@ModelAttribute("orderAdd") OrderInfo c, HttpServletRequest h, Model m) {
 		
 		ArrayList<Ship> ships = shipOb.getAll();
-		m.addAttribute("ships", ships);
+		
+		Map<Long,String> shipList = new HashMap<Long,String>();
+		
+		for (Ship s : ships) {	
+			if (s.getShippingCompany() == null){
+				shipList.put(s.getSid(), s.getName());
+			}
+		}
+		
+		m.addAttribute("shipList", shipList);
+		
 		
 		ArrayList<ShippingCompany> companies = companyOb.getAll();
-		m.addAttribute("companies", companies);
+		
+		Map<Long,String> companyList = new HashMap<Long,String>();
+		
+		for (ShippingCompany sc : companies) {	
+			companyList.put(sc.getScid(), sc.getName());
+		}
+		
+		m.addAttribute("companyList", companyList);
 		
 		return "createOrder";
 	}

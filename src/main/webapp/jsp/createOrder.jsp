@@ -15,18 +15,13 @@
 			<tr>
 				<td>Ship Name:</td>
 				<td>
-				<form:select path="ship" items="${ships}">
-				</form:select>
+					<form:select path="ship" items="${shipList}"/>
 				</td>
 			</tr>
 			<tr>
 			<td>Shipping Company:</td>
 				<td>
-					<select name="companies">
-						<c:forEach items="${companies}" var="companies">
-							<option value="${companies}">${companies}</option>
-						</c:forEach>
-					</select>
+					<form:select path="ship" items="${companies}"/>
 				</td>
 			</tr>
 			<tr>
