@@ -83,7 +83,7 @@ public class OrderController {
 		}else if(c.getShip() == null || c.getShippingCompany() == null){
 			return "errorAddOrder";
 		}else if (c.getShip().getCost().compareTo(c.getShippingCompany().getBalance()) == (0|1)) {
-			return "errorAddOrder";
+			return "errorAddOrderMoney";
 		}else {
 			
 			orderOb.save(c);
