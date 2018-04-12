@@ -9,26 +9,10 @@
 <title>SS RAD Final Project(Add Ship)</title>
 </head>
 <body>
-	<form:form modelAttribute="orderAdd">
-		<h1>Add Ship</h1>
-		<table>
-			<tr>
-				<td>Ship Name:</td>
-				<td>
-					<form:select path="ship" items="${shipList}"/>
-				</td>
-			</tr>
-			<tr>
-			<td>Shipping Company:</td>
-				<td>
-					<form:select path="ShippingCompany" items="${companyList}"/>
-				</td>
-			</tr>
-			<tr>
-				<td><input type="submit" value="Order Ship" /></td>
-			</tr>
-		</table>
-		<a href="/">Home</a>
-	</form:form>
+	
+	<h1>Error Creating the Order</h1>
+	<h2>No Ship and/or Shipping Company Selected</h2>
+	<a href="/">Home</a>
+	
 </body>
 </html>
