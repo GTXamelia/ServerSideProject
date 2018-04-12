@@ -80,10 +80,12 @@ public class OrderController {
 		} else {
 			
 			orderOb.save(c);
+			shipOb.save(c.getShip());
+			
 			
 			ArrayList<OrderInfo> orders = orderOb.getAll();
 			m.addAttribute("orders", orders);
-
+			
 	
 			return "showOrders";
 		}

@@ -26,6 +26,9 @@ public class OrderService {
 	@Autowired
 	private CompanyInterface companyInt;
 	
+	@Autowired
+	private ShipService shipOb;
+	
 	private Ship ship;
 	private ShippingCompany ShippingCompany;
 	
@@ -39,13 +42,15 @@ public class OrderService {
 	public OrderInfo save(OrderInfo order) {
 		
 		ship = shipInt.findOne(order.getShip().getSid());
-		//ShippingCompany = companyInt.findOne(order.getShippingCompany().getScid());
+		ShippingCompany = companyInt.findOne(order.getShippingCompany().getScid());
 		
-		order.setShip(ship);
+		ship.setShippingCompany(order.getShippingCompany());
+		
+		shipOb.save(ship);
+		
+		order.setShippingCompany(ShippingCompany);
 		order.setDate(dateFormat.format(date));
 		
 		return orderInt.save(order);
 	}
-
-	
 }

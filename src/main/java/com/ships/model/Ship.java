@@ -23,7 +23,7 @@ public class Ship {
 	private String name;
 	
 	@NotNull
-	@Min(value = 1)
+	@Min(value = 0)
 	private int passengers;
 	
 	@NotNull

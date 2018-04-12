@@ -20,6 +20,4 @@ public class ShipService {
 	public Ship save(Ship ship) {
 		return shipInt.save(ship);
 	}
-
-	
 }
