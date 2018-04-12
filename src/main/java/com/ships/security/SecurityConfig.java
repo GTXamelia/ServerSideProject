@@ -6,25 +6,28 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 
+@EnableWebSecurity
+public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
-public class SecuritySettings {
+	@Override
+	public void configure(HttpSecurity httpSecurity) throws Exception {
+		httpSecurity
+		.authorizeRequests()
+		.antMatchers("/addShip", 
+					 "/addShippingCompany", 
+					 "/showOrders"
+					 )
+		.hasRole("USER")
+		.and()
+		.formLogin();
+	}
 
-	@EnableWebSecurity
-	public class SecurityConfig extends WebSecurityConfigurerAdapter{ 
-	  @Override
-	  public void configure(HttpSecurity httpSecurity) throws Exception{
-	    httpSecurity.authorizeRequests()
-	     .antMatchers("/url1", "/url2", "/urln")
-	     .hasRole("USER")
-	     .and()
-	     .formLogin();
-	  }
-
-	  @Autowired
+	@Autowired
 	  public void configureGlobal(AuthenticationManagerBuilder auth) 
 							throws Exception {
 	    auth.inMemoryAuthentication()
 	      .withUser("user").password("user").roles("USER");
 	  }
-	}
+
+
 }
