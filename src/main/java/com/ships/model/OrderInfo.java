@@ -16,12 +16,15 @@ public class OrderInfo {
 	@Id
 	@GeneratedValue
 	private int oid;
+	
 	@ManyToOne
 	@JoinColumn(name="scid")
 	private ShippingCompany shippingCompany;
+	
 	@OneToOne
 	@JoinColumn(name="sid")
 	private Ship ship;
+	
 	private String date;
 
 	public int getOid() {
