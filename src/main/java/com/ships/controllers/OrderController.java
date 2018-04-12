@@ -81,7 +81,7 @@ public class OrderController {
 		if (result.hasErrors()) {
 			return "addOrder";
 		}else if(c.getShip() == null){
-			return "showShip";
+			return "errorAddOrder";
 		}else {
 			
 			orderOb.save(c);
