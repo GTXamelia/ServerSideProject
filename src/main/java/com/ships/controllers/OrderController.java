@@ -75,9 +75,6 @@ public class OrderController {
 	@RequestMapping(value = "/addOrder", method = RequestMethod.POST)
 	public String addShip(@Valid @ModelAttribute("orderAdd") OrderInfo c, BindingResult result, HttpServletRequest h, Model m) {
 		
-		
-		System.out.println("\n\n\n\n\n\n\n" + c + " " + result + " " + h + " " + m + "\n\n\n\n\n\n\n\n\n\n");
-		
 		if (result.hasErrors()) {
 			return "addOrder";
 		}else if(c.getShip() == null || c.getShippingCompany() == null){
