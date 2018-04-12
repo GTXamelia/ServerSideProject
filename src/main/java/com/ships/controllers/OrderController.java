@@ -79,10 +79,11 @@ public class OrderController {
 			return "addOrder";
 		} else {
 			
+			orderOb.save(c);
+			
 			ArrayList<OrderInfo> orders = orderOb.getAll();
 			m.addAttribute("orders", orders);
-			
-			orderOb.save(c);
+
 	
 			return "showOrders";
 		}
