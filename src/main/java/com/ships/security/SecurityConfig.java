@@ -15,22 +15,17 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		.authorizeRequests()
 		.antMatchers("/addShip", 
 					 "/addShippingCompany", 
-					 "/addOrder",
-					 "/showOrders",
-					 "/showShippingCompanies",
-					 "/showShips")
+					 "/addOrder")
 		.hasRole("USER")
 		.and()
 		.formLogin();
 	}
 
 	@Autowired
-	  public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
+	public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
 		auth.inMemoryAuthentication()
 		.withUser("user")
 		.password("user")
 		.roles("USER");
-	  }
-
-
+	}
 }

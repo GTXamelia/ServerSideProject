@@ -24,10 +24,10 @@ table, th, td {
 			</tr>
 			<c:forEach items="${companies}" var="companies">
 				<tr>
-					<td>${companies.name}<tv>
-					<td>${companies.homePort}<tv>
-					<td>${companies.balance}<tv>
-					<td>${companies.ships}<tv>
+					<td>${companies.name}</td>
+					<td>${companies.homePort}</td>
+					<td>${companies.balance}</td>
+					<td>${companies.ships}</td>
 				</tr>
 			</c:forEach>
 		</table>

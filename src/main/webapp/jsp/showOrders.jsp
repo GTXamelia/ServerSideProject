@@ -24,10 +24,10 @@ table, th, td {
 			</tr>
 			<c:forEach items="${orders}" var="orders">
 				<tr>
-					<td>${orders.oid}<tv>
-					<td>${orders.shippingCompany.name}<tv>
-					<td>${orders.ship.name}<tv>
-					<td>${orders.date}<tv>
+					<td>${orders.oid}</td>
+					<td>${orders.shippingCompany.name}</td>
+					<td>${orders.ship.name}</td>
+					<td>${orders.date}</td>
 				</tr>
 			</c:forEach>
 		</table>
