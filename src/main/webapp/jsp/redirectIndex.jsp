@@ -5,7 +5,14 @@
 
 <html>
 <head>
-<title>Web-page Redirect</title>
-<meta http-equiv="refresh" content="0.01; URL=../index.html">
+<title>Logout Success</title>
+<meta http-equiv="refresh" content="2; URL=../index.html">
 <meta name="keywords" content="automatic redirection">
+</head>
+<body>
+<h1>You have been logged out!</h1>
+<h2>You should be auto directed to the home page in 2 seconds</h2>
+<h2>If auto direct isin't supported click link below</h2>
+<a href="../index.html">Home</a> 
+</body>
 </html>
