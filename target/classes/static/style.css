@@ -15,3 +15,23 @@ table th {
 	background-color: #FECB00;
 	color: black;
 }
+
+/* unvisited link */
+a:link {
+    color: #FFFFFF;
+}
+
+/* visited link */
+a:visited {
+    color: #FFFFFF;
+}
+
+/* mouse over link */
+a:hover {
+    color: #FECB00;
+}
+
+/* selected link */
+a:active {
+    color: #FECB00;
+}
