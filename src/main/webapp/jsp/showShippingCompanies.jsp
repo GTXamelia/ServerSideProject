@@ -3,21 +3,7 @@
 
 <html>
 <head>
-<style>
-table {
-	width: 45%;
-}
-
-table tr {
-	background-color: #222222;
-	color: white;
-}
-
-table th {
-	background-color: #FECB00;
-	color: black;
-}
-</style>
+	<link rel="stylesheet" type="text/css" href="style.css">
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 	<title>SS RAD Final Project (Companies)</title>
 </head>
