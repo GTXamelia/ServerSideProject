@@ -4,8 +4,18 @@
 <html>
 <head>
 <style>
-table, th, td {
-	border: 1px solid black;
+table {
+	width: 45%;
+}
+
+table tr {
+	background-color: #222222;
+	color: white;
+}
+
+table th {
+	background-color: #FECB00;
+	color: black;
 }
 </style>
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">

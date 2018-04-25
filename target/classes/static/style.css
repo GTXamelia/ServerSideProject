@@ -1,0 +1,13 @@
+table {
+	width: 45%;
+}
+
+table tr {
+	background-color: #222222;
+	color: white;
+}
+
+table th {
+	background-color: #FECB00;
+	color: black;
+}
