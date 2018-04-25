@@ -1,6 +1,5 @@
 package com.ships.controllers;
 
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -24,16 +23,16 @@ import com.ships.services.ShipService;
 
 @Controller
 public class OrderController {
-	
+
 	@Autowired
 	private OrderService orderOb;
-	
+
 	@Autowired
 	private ShipService shipOb;
-	
+
 	@Autowired
 	private CompanyService companyOb;
-	
+
 	@RequestMapping(value = "/showOrders", method = RequestMethod.GET)
 	public String getShips(Model m) {
 
@@ -42,57 +41,56 @@ public class OrderController {
 
 		return "showOrders";
 	}
-		
+
 	@RequestMapping(value = "/addOrder", method = RequestMethod.GET)
 	public String getShip(@ModelAttribute("orderAdd") OrderInfo c, HttpServletRequest h, Model m) {
-		
+
 		ArrayList<Ship> ships = shipOb.getAll();
-		
-		Map<Long,String> shipList = new HashMap<Long,String>();
-		
-		for (Ship s : ships) {	
-			if (s.getShippingCompany() == null){
+
+		Map<Long, String> shipList = new HashMap<Long, String>();
+
+		for (Ship s : ships) {
+			if (s.getShippingCompany() == null) {
 				shipList.put(s.getSid(), s.getName() + ", Cost = " + s.getCost());
 			}
 		}
-		
+
 		m.addAttribute("shipList", shipList);
-		
-		
+
 		ArrayList<ShippingCompany> companies = companyOb.getAll();
-		
-		Map<Long,String> companyList = new HashMap<Long,String>();
-		
-		for (ShippingCompany sc : companies) {	
+
+		Map<Long, String> companyList = new HashMap<Long, String>();
+
+		for (ShippingCompany sc : companies) {
 			companyList.put(sc.getScid(), sc.getName() + ", Balance = " + sc.getBalance());
 		}
-		
+
 		m.addAttribute("companyList", companyList);
-		
+
 		return "addOrder";
 	}
-	
+
 	@RequestMapping(value = "/addOrder", method = RequestMethod.POST)
-	public String addShip(@Valid @ModelAttribute("orderAdd") OrderInfo c, BindingResult result, HttpServletRequest h, Model m) {
-		
+	public String addShip(@Valid @ModelAttribute("orderAdd") OrderInfo c, BindingResult result, HttpServletRequest h,
+			Model m) {
+
 		if (result.hasErrors()) {
 			return "addOrder";
-		}else if(c.getShip() == null || c.getShippingCompany() == null){
+		} else if (c.getShip() == null || c.getShippingCompany() == null) {
 			return "errorAddOrder";
-		}else if (c.getShip().getCost().compareTo(c.getShippingCompany().getBalance()) == (0|1)) {
+		} else if (c.getShip().getCost().compareTo(c.getShippingCompany().getBalance()) == (0 | 1)) {
 			return "errorAddOrderMoney";
-		}else {
-			
+		} else {
+
 			c.getShippingCompany().setBalance(c.getShippingCompany().getBalance().subtract(c.getShip().getCost()));
-			
+
 			orderOb.save(c);
 			shipOb.save(c.getShip());
 			companyOb.save(c.getShippingCompany());
-			
-			
+
 			ArrayList<OrderInfo> orders = orderOb.getAll();
 			m.addAttribute("orders", orders);
-	
+
 			return "showOrders";
 		}
 	}
