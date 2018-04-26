@@ -2,9 +2,6 @@ package com.ships.controllers;
 
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
-
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,19 +12,14 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.ships.model.Ship;
 import com.ships.model.ShippingCompany;
 import com.ships.services.CompanyService;
-import com.ships.services.ShipService;
 
 @Controller
 public class CompanyController {
 	
 	@Autowired
 	private CompanyService companyOb;
-	
-	@Autowired
-	private ShipService shipOb;
 	
 	@RequestMapping(value = "/showShippingCompanies", method = RequestMethod.GET)
 	public String getCompanies(Model m) {
