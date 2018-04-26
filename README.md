@@ -35,7 +35,7 @@ Open Eclipse project
 ## Running the tests
 
 ### Menus
-<a href="https://imgur.com/kZjB1vH"><img src="https://imgur.com/kZjB1vH.gif" title="header"/></a>
+<a href="https://imgur.com/kZjB1vH"><img src="https://imgur.com/kZjB1vHgif" title="header"/></a>
 
 ### Accessing add menus before login
 <a href="https://imgur.com/7L5xvpE"><img src="https://imgur.com/7L5xvpE.gif" title="header"/></a>
