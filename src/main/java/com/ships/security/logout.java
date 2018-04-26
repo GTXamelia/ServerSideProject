@@ -19,9 +19,12 @@ public class logout {
 	    
 	    if (auth != null){    
 	    	new SecurityContextLogoutHandler().logout(request, response, auth);
+	    	return "errorAddOrder";
+	    }else{
+	    	return "redirectIndex";
 	    }
 	    
-	    return "redirectIndex";
+	    
 	}
 
 }

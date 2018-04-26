@@ -17,7 +17,7 @@
 	<div align="center">
 		<img src="header.png" alt="Logo">
 		
-		<h1 class="error">You have been logged out!</h1>
+		<h1 class="error">Log in before trying to log out!</h1>
 		<h2 class="error">You should be auto directed to the home page in 5 seconds</h2>
 		<h2 class="error">If auto direct isin't supported click link below</h2>
 		<a href="../index.html">Home</a>
