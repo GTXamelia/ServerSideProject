@@ -37,3 +37,17 @@ Open Eclipse project
 * [Eclipse](https://eclipse.org/) - IDE used
 * [Spring Tools](https://marketplace.eclipse.org/content/spring-tools-aka-spring-ide-and-spring-tool-suite)
 * [StackOverflow](https://stackoverflow.com/) - Community forum for troubleshooting
+
+## Authors
+
+* **Cian Gannon** - *All source code and UI* - [Github](https://github.com/cian2009)
+* **Gerard Harrison** - Proivided skeleton project structure with basic setup
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE) file for details
+
+## Acknowledgments
+
+* StackOverflow - How did people code before you existed
+* Gerard Harrison - Proivided support in computer labs for problem solving
