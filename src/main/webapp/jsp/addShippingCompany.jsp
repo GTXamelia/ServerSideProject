@@ -2,33 +2,35 @@
 <html>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <head>
+<link rel="stylesheet" type="text/css" href="style.css">
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>SS RAD Final Project(Add Shipping Company)</title>
 </head>
 <body>
-	<form:form modelAttribute="companyAdd">
-		<h1>Add Shipping Company</h1>
-		<table>
-			<tr>
-				<td>Company Name:</td>
-				<td><form:input path="name"></form:input></td>
-				<td><form:errors path="name"></form:errors></td>
-			</tr>
-			<tr>
-				<td>Home Port:</td>
-				<td><form:input path="homePort"></form:input></td>
-				<td><form:errors path="homePort"></form:errors></td>
-			</tr>
-			<tr>
-				<td>Balance:</td>
-				<td><form:input path="balance"></form:input></td>
-				<td><form:errors path="balance"></form:errors></td>
-			</tr>
-			<tr>
-				<td><input type="submit" value="Add" /></td>
-			</tr>
-		</table>
-		<a href="/">Home</a>
-	</form:form>
+
+	<div align="center">
+		<img src="header.png" alt="Logo">
+	</div>
+
+	<div class="add">
+		<form:form modelAttribute="companyAdd">
+
+			<label for="name">Company Name:</label>
+			<form:input path="name"></form:input>
+			<form:errors path="name"></form:errors>
+
+			<label for="home">Home Port:</label>
+			<form:input path="homePort"></form:input>
+			<form:errors path="homePort"></form:errors>
+
+			<label for="balance">Balance:</label>
+			<form:input path="balance"></form:input>
+			<form:errors path="balance"></form:errors>
+
+			<input type="submit" value="Add" />
+
+			<a href="/">Home</a>
+		</form:form>
+	</div>
 </body>
 </html>
