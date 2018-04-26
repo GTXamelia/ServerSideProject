@@ -8,10 +8,13 @@
 <head>
 <link rel="stylesheet" type="text/css" href="style.css">
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>SS RAD Final Project(Add Ship)</title>
+<title>SS RAD Final Project(Add Order)</title>
 </head>
 <body>
-	<h1>Add Ship</h1>
+	<div align="center">
+		<img src="header.png" alt="Logo">
+	</div>
+	
 	<div class="add">
 		<form:form modelAttribute="orderAdd">
 
@@ -21,7 +24,7 @@
 			<label for="comp">Companies:</label>
 			<form:select path="ShippingCompany" items="${companyList}" />
 
-			<label for="lname">Last Name</label>
+			<br>
 			<input type="submit" value="Order Ship" />
 
 
