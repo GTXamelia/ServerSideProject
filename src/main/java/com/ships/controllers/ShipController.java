@@ -24,7 +24,7 @@ public class ShipController {
 	@RequestMapping(value = "/showShips", method = RequestMethod.GET)
 	public String getShips(Model m) {
 
-		// Get all data from the ship object and add to array list using a new
+		// Get all data from ShipService and add to array list using a new
 		// instance of the ship object
 		ArrayList<Ship> ships = shipOb.getAll();
 		

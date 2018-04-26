@@ -1,6 +1,5 @@
 package com.ships.controllers;
 
-
 import java.util.ArrayList;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
@@ -17,40 +16,55 @@ import com.ships.services.CompanyService;
 
 @Controller
 public class CompanyController {
-	
+
 	@Autowired
 	private CompanyService companyOb;
-	
-	// This handles a HTTP 'GET' request
+
+	// This handles a HTTP 'GET' request for /showShippingCompanies
 	@RequestMapping(value = "/showShippingCompanies", method = RequestMethod.GET)
 	public String getCompanies(Model m) {
 
-		
+		// Get all data from CompanyService and add to array list using a new
+		// instance of the ShippingCompany object
 		ArrayList<ShippingCompany> companies = companyOb.getAll();
+		
+		// Add array list to the 'companies' model
 		m.addAttribute("companies", companies);
 
+		// Return 'showShippingCompanies' page
 		return "showShippingCompanies";
 	}
-		
+
+	// This handles a HTTP 'GET' request for /addShippingCompany
 	@RequestMapping(value = "/addShippingCompany", method = RequestMethod.GET)
 	public String getCompany(@ModelAttribute("companyAdd") ShippingCompany c, HttpServletRequest h) {
+		
+		// Return 'showShippingCompanies' page
 		return "addShippingCompany";
 	}
-	
+
+	// This handles a HTTP 'POST' request for /addShippingCompany
 	@RequestMapping(value = "/addShippingCompany", method = RequestMethod.POST)
 	public String addCompany(@Valid @ModelAttribute("companyAdd") ShippingCompany c, BindingResult result, HttpServletRequest h, Model m) {
 		
+		// If the page encountered any errors stay on the page
 		if (result.hasErrors()) {
 			return "addShippingCompany";
 		} else {
-			companyOb.save(c);
 			
+			// Add the new ship to the object
+			companyOb.save(c);
+
+			// Get all data from CompanyService and add to array list using a new
+			// instance of the ShippingCompany object
 			ArrayList<ShippingCompany> companies = companyOb.getAll();
-	
+
+			// Add array list to the 'companies' model
 			m.addAttribute("companies", companies);
-	
+
+			// Return 'showShippingCompanies' page
 			return "showShippingCompanies";
 		}
-		
+
 	}
 }
