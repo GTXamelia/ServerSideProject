@@ -25,8 +25,15 @@ A step by step series of examples that tell you have to get a development env ru
 Instructions above in "Getting Started"
 ```
 
-3. Import project into eclipse
+2.Import project into Eclipse
 ```
 Click 'file<'
 Click 'Open Projects from File System...'
+Open Eclipse project
 ```
+
+## Built With
+
+* [Eclipse](https://eclipse.org/) - IDE used
+* [Spring Tools](https://marketplace.eclipse.org/content/spring-tools-aka-spring-ide-and-spring-tool-suite)
+* [StackOverflow](https://stackoverflow.com/) - Community forum for troubleshooting
