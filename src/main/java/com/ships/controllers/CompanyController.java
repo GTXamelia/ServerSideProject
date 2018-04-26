@@ -65,6 +65,5 @@ public class CompanyController {
 			// Return 'showShippingCompanies' page
 			return "showShippingCompanies";
 		}
-
 	}
 }
