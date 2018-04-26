@@ -13,18 +13,25 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class logout {
 
+	// This handles a HTTP 'GET' request for /showShippingCompanies
 	@RequestMapping(value="/logout", method = RequestMethod.GET)
 	public String logoutPage (HttpServletRequest request, HttpServletResponse response) {
+		
+		// Security settings
 	    Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 	    
+	    // Check if security has been added (User logged in)
+	    // Not null means user has been logged in
 	    if (auth != null){    
+	    	// log out user
 	    	new SecurityContextLogoutHandler().logout(request, response, auth);
-	    	return "errorNotLoggedIn";
-	    }else{
+	    	
+	    	// Return 'redirectIndex' page
 	    	return "redirectIndex";
-	    }
-	    
-	    
+	    }else{
+	    	
+	    	// Return 'errorNotLoggedIn' page
+	    	return "errorNotLoggedIn";	
+	    }   
 	}
-
 }

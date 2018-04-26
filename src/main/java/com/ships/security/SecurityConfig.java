@@ -11,6 +11,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Override
 	public void configure(HttpSecurity httpSecurity) throws Exception {
+		
+		// Set which pages require login
 		httpSecurity
 		.authorizeRequests()
 		.antMatchers("/addShip", 
@@ -23,11 +25,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Autowired
 	public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
+		
+		// Add user(s)
 		auth.inMemoryAuthentication()
 		.withUser("user")
 		.password("user")
 		.roles("USER");
 	}
-	
-	
 }
