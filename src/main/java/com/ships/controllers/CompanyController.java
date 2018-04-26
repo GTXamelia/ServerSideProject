@@ -21,9 +21,11 @@ public class CompanyController {
 	@Autowired
 	private CompanyService companyOb;
 	
+	// This handles a HTTP 'GET' request
 	@RequestMapping(value = "/showShippingCompanies", method = RequestMethod.GET)
 	public String getCompanies(Model m) {
 
+		
 		ArrayList<ShippingCompany> companies = companyOb.getAll();
 		m.addAttribute("companies", companies);
 
