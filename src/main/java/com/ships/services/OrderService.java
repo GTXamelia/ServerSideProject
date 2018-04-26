@@ -35,25 +35,35 @@ public class OrderService {
 	private DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 	private Date date = new Date();
 
+	// Get all data from the Ship object using the interface
 	public ArrayList<OrderInfo> getAll() {
 		return (ArrayList<OrderInfo>) orderInt.findAll();
 	}
 
+	// Used for adding Ship or updating one
 	public OrderInfo save(OrderInfo order) {
+		
 		
 		if (shipInt.findOne(order.getShip().getSid()) != null) {
 			ship = shipInt.findOne(order.getShip().getSid());
 		}
 		
+		// Get ShippingCompany that matches orders shipping company
 		ShippingCompany = companyInt.findOne(order.getShippingCompany().getScid());
 		
+		// Set ships shipping company to the orders shipping company
 		ship.setShippingCompany(order.getShippingCompany());
 		
+		// Save ship
 		shipOb.save(ship);
 		
+		// Set order to equal the shipping company details
 		order.setShippingCompany(ShippingCompany);
+		
+		// Set the order date
 		order.setDate(dateFormat.format(date));
 		
+		// Return the saved order
 		return orderInt.save(order);
 	}
 }

@@ -13,13 +13,13 @@ public class CompanyService {
 	@Autowired
 	private CompanyInterface companyInt;
 
+	// Get all data from the ShippingCompany object using the interface
 	public ArrayList<ShippingCompany> getAll() {
 		return (ArrayList<ShippingCompany>) companyInt.findAll();
 	}
 
+	// Used for adding ShippingCompany or updating one
 	public ShippingCompany save(ShippingCompany company) {
 		return companyInt.save(company);
 	}
-
-	
 }
