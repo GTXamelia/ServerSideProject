@@ -40,6 +40,15 @@ Open Eclipse project
 ### Accessing add menus before login
 <a href="https://imgur.com/7L5xvpE"><img src="https://imgur.com/7L5xvpE.gif" title="header"/></a>
 
+### Adding new ship
+<a href="https://imgur.com/RYEAgg4"><img src="https://imgur.com/RYEAgg4.gif" title="header"/></a>
+
+### Adding new shipping company
+<a href="https://imgur.com/d2PGJe5"><img src="https://imgur.com/d2PGJe5.gif" title="header"/></a>
+
+### Adding new order
+<a href="https://imgur.com/JC7rsKq"><img src="https://imgur.com/JC7rsKq.gif" title="header"/></a>
+
 ## Built With
 
 * [Eclipse](https://eclipse.org/) - IDE used
