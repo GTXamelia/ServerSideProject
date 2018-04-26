@@ -6,6 +6,7 @@
 
 <html>
 <head>
+<link rel="stylesheet" type="text/css" href="style.css">
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <meta http-equiv="refresh" content="5; URL=../index.html">
 <meta name="keywords" content="automatic redirection">
