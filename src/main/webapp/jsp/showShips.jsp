@@ -9,26 +9,30 @@
 <title>SS RAD Final Project (Ships)</title>
 </head>
 <body>
-	<h1>Ship</h1>
-	<table>
-		<tr>
-			<th>Name</th>
-			<th>Passengers</th>
-			<th>Cost</th>
-			<th>Length(Metres)</th>
-			<th>Shipping Company</th>
-		</tr>
-		<c:forEach items="${ships}" var="ships">
-			<tr>
-				<td>${ships.name}</td>
-				<td>${ships.passengers}</td>
-				<td>${ships.cost}</td>
-				<td>${ships.metres}</td>
-				<td>${ships.shippingCompany.name}</td>
-			</tr>
-		</c:forEach>
-	</table>
 
-	<a href="/">Home</a>
+	<div align="center">
+		<img src="header.png" alt="Logo">
+		<table class="show">
+			<tr>
+				<th>Name</th>
+				<th>Passengers</th>
+				<th>Cost</th>
+				<th>Length(Metres)</th>
+				<th>Shipping Company</th>
+			</tr>
+			<c:forEach items="${ships}" var="ships">
+				<tr>
+					<td>${ships.name}</td>
+					<td>${ships.passengers}</td>
+					<td>${ships.cost}</td>
+					<td>${ships.metres}</td>
+					<td>${ships.shippingCompany.name}</td>
+				</tr>
+			</c:forEach>
+		</table>
+		<a href="/">Home</a>
+	</div>
+
+	
 </body>
 </html>

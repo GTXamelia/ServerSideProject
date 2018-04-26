@@ -9,26 +9,27 @@
 <title>SS RAD Final Project (Companies)</title>
 </head>
 <body>
-	<h1>Companies</h1>
 
-	<h1></h1>
-	<table>
-		<tr>
-			<th>Name</th>
-			<th>Home Post</th>
-			<th>Cost</th>
-			<th>Ships</th>
-		</tr>
-		<c:forEach items="${companies}" var="companies">
+	<div align="center">
+		<img src="header.png" alt="Logo">
+		<table class="show">
 			<tr>
-				<td>${companies.name}</td>
-				<td>${companies.homePort}</td>
-				<td>${companies.balance}</td>
-				<td>${companies.ships}</td>
+				<th>Name</th>
+				<th>Home Post</th>
+				<th>Cost</th>
+				<th>Ships</th>
 			</tr>
-		</c:forEach>
-	</table>
-
-	<a href="/">Home</a>
+			<c:forEach items="${companies}" var="companies">
+				<tr>
+					<td>${companies.name}</td>
+					<td>${companies.homePort}</td>
+					<td>${companies.balance}</td>
+					<td>${companies.ships}</td>
+				</tr>
+			</c:forEach>
+		</table>
+		<a href="/">Home</a>
+	</div>
+	
 </body>
 </html>

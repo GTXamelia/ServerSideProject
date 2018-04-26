@@ -9,26 +9,27 @@
 <title>SS RAD Final Project (Orders)</title>
 </head>
 <body>
-	<h1>Orders</h1>
 
-	<h1></h1>
-	<table>
-		<tr>
-			<th>Order Number</th>
-			<th>Shipping Company Name</th>
-			<th>Ship Name</th>
-			<th>Order Date</th>
-		</tr>
-		<c:forEach items="${orders}" var="orders">
+	<div align="center">
+		<img src="header.png" alt="Logo">
+		<table class="show">
 			<tr>
-				<td>${orders.oid}</td>
-				<td>${orders.shippingCompany.name}</td>
-				<td>${orders.ship.name}</td>
-				<td>${orders.date}</td>
+				<th>Order Number</th>
+				<th>Shipping Company Name</th>
+				<th>Ship Name</th>
+				<th>Order Date</th>
 			</tr>
-		</c:forEach>
-	</table>
-
-	<a href="/">Home</a>
+			<c:forEach items="${orders}" var="orders">
+				<tr>
+					<td>${orders.oid}</td>
+					<td>${orders.shippingCompany.name}</td>
+					<td>${orders.ship.name}</td>
+					<td>${orders.date}</td>
+				</tr>
+			</c:forEach>
+		</table>
+		<a href="/">Home</a>
+	</div>
+	
 </body>
 </html>
