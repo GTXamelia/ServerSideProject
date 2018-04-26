@@ -76,3 +76,7 @@ div.add {
     background-color: #222222;
     padding: 20px;
 }
+
+.error {
+	color: #FECB00;
+}
