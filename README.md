@@ -32,6 +32,11 @@ Click 'Open Projects from File System...'
 Open Eclipse project
 ```
 
+## Running the tests
+
+### Menus
+<a href="https://imgur.com/kZjB1vH"><img src="https://imgur.com/kZjB1vH.gif" title="header"/></a>
+
 ## Built With
 
 * [Eclipse](https://eclipse.org/) - IDE used
