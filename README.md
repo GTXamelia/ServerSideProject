@@ -6,13 +6,27 @@
  
 ## Getting Started
 
-- Create blank visual studio UWP application
-- Right click on project folder
 - Git init
-- Git remote add origin https://github.com/cian2009/UWPIrishTransportTracker.git
+- Git remote add origin https://github.com/cian2009/ServerSideProject.git
 - Git pull origin master
 
 ### Prerequisites
 
 Spring:
 [Spring Tools](https://marketplace.eclipse.org/content/spring-tools-aka-spring-ide-and-spring-tool-suite)
+
+### Installing
+
+A step by step series of examples that tell you have to get a development env running
+
+1.Download the git project
+
+```
+Instructions above in "Getting Started"
+```
+
+3. Import project into eclipse
+```
+Click <i>file</i>
+Click <i>Open Projects from File System...</i>
+```
