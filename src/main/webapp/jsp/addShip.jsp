@@ -2,38 +2,40 @@
 <html>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <head>
+<link rel="stylesheet" type="text/css" href="style.css">
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>SS RAD Final Project(Add Ship)</title>
 </head>
 <body>
-	<form:form modelAttribute="shipAdd">
-		<h1>Add Ship</h1>
-		<table>
-			<tr>
-				<td>Ship Name:</td>
-				<td><form:input path="name"></form:input></td>
-				<td><form:errors path="name"></form:errors></td>
-			</tr>
-			<tr>
-				<td>Passangers:</td>
-				<td><form:input path="passengers"></form:input></td>
-				<td><form:errors path="passengers"></form:errors></td>
-			</tr>
-			<tr>
-				<td>Cost:</td>
-				<td><form:input path="cost"></form:input></td>
-				<td><form:errors path="cost"></form:errors></td>
-			</tr>
-			<tr>
-				<td>Metres:</td>
-				<td><form:input path="metres"></form:input></td>
-				<td><form:errors path="metres"></form:errors></td>
-			</tr>
-			<tr>
-				<td><input type="submit" value="Add" /></td>
-			</tr>
-		</table>
-		<a href="/">Home</a>
-	</form:form>
+
+	<div align="center">
+		<img src="header.png" alt="Logo">
+	</div>
+
+	<div class="add">
+
+		<form:form modelAttribute="shipAdd">
+
+			<label for="ship">Ship Name:</label>
+			<form:input path="name"></form:input>
+			<form:errors path="name"></form:errors>
+
+			<label for="passengers">Passengers:</label>
+			<form:input path="passengers"></form:input>
+			<form:errors path="passengers"></form:errors>
+
+			<label for="cost">Cost:</label>
+			<form:input path="cost"></form:input>
+			<form:errors path="cost"></form:errors>
+
+			<label for="metres">Metres:</label>
+			<form:input path="metres"></form:input>
+			<form:errors path="metres"></form:errors>
+
+			<input type="submit" value="Add" /><
+
+			<a href="/">Home</a>
+		</form:form>
+	</div>
 </body>
 </html>
