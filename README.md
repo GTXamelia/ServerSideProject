@@ -2,7 +2,23 @@
 <a href="https://i.imgur.com/PuVLmlx"><img src="https://i.imgur.com/PuVLmlx.png" height="200" width="750" title="header"/></a>
  </div>
  
- 
+ - [Getting Started](#getting-started)
+  * [Prerequisites](#prerequisites)
+  * [Installing](#installing)
+- [Running the tests](#running-the-tests)
+  * [Menus](#menus)
+  * [Accessing add menus before login](#accessing-add-menus-before-login)
+  * [Adding pages](#adding-pages)
+    + [Adding new ship](#adding-new-ship)
+    + [Adding new shipping company](#adding-new-shipping-company)
+    + [Adding new order](#adding-new-order)
+  * [Error pages](#error-pages)
+    + [No ship/Shipping company](#no-ship-shipping-company)
+    + [Balance too low to order](#balance-too-low-to-order)
+- [Built With](#built-with)
+- [Authors](#authors)
+- [License](#license)
+- [Acknowledgments](#acknowledgments)
  
 ## Getting Started
 
