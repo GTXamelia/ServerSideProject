@@ -19,7 +19,7 @@ public class logout {
 	    
 	    if (auth != null){    
 	    	new SecurityContextLogoutHandler().logout(request, response, auth);
-	    	return "errorAddOrder";
+	    	return "errorNotLoggedIn";
 	    }else{
 	    	return "redirectIndex";
 	    }

@@ -32,7 +32,7 @@
 			<form:input path="metres"></form:input>
 			<form:errors path="metres"></form:errors>
 
-			<input type="submit" value="Add" /><
+			<input type="submit" value="Add" />
 
 			<a href="/">Home</a>
 		</form:form>
