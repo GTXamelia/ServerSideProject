@@ -27,6 +27,6 @@ Instructions above in "Getting Started"
 
 3. Import project into eclipse
 ```
-Click <i>file</i>
-Click <i>Open Projects from File System...</i>
+Click 'file<'
+Click 'Open Projects from File System...'
 ```
